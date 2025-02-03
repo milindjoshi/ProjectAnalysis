@@ -18,7 +18,7 @@ sprint_duration_weeks = int(config['PROJECT']['sprint_duration_weeks'])
 velocity = int(config['PROJECT']['velocity'])
 #print(f'velocity: {velocity}')
 num_resources = int(config['PROJECT']['num_resources'])
-hours_per_week_per_resource = int(config['PROJECT']['hours_per_week_per_resource'])
+hours_per_sprint_per_resource = int(config['PROJECT']['hours_per_sprint_per_resource'])
 non_project_hours = int(config['PROJECT']['non_project_hours'])
 story_points_per_hour = float(config['PROJECT']['story_points_per_hour'])
 
@@ -32,7 +32,7 @@ simulations = int(config['SIMULATION']['simulations'])
 velocity_std_dev = float(config['SIMULATION']['velocity_std_dev'])
 
 # Derived values
-working_hours_per_week = hours_per_week_per_resource - non_project_hours
+working_hours_per_sprint = hours_per_sprint_per_resource - non_project_hours
 ungroomed_story_points = ungroomed_story_count * avg_story_points_per_story
 total_story_points = groomed_story_points + ungroomed_story_points
 
